@@ -36,10 +36,10 @@ public class WordRepository {
     }
     */
 
-    String findWordByPolish(String polish) throws ExecutionException, InterruptedException {
+    Word findWordByPolish(String polish) throws ExecutionException, InterruptedException {
         return WordDatabase.databaseWriteExecutor.submit(() -> wordDao.findWordByPolish(polish)).get();
     }
-    String findWordByEnglish(String english) throws ExecutionException, InterruptedException {
+    Word findWordByEnglish(String english) throws ExecutionException, InterruptedException {
         return WordDatabase.databaseWriteExecutor.submit(() -> wordDao.findWordByEnglish(english)).get();
     }
 }
