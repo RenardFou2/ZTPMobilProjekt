@@ -44,4 +44,9 @@ public class Word {
     public void setEnglish(String english) {
         this.english = english;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
