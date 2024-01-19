@@ -19,3 +19,5 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 s
 Capp/src/main/java/com/example/ztpmobilprojekt/WordListActivity.java,b\4\b41093bd6e41252f3ff233a081b61908b17d8cf8
+p
+@app/src/main/java/com/example/ztpmobilprojekt/WordViewModel.java,2\b\2b893287734cb58e8619f355075a654b4f37c125
