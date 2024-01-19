@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ZTPMobilProjekt</string>
+    <string name="word_list_menu_button">List of words</string>
 </resources>
