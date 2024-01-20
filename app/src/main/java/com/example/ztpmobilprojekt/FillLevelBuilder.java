@@ -10,30 +10,30 @@ public class FillLevelBuilder implements ILevelBuilder {
     WordRepository wordRepository;
     List<Word> candidates;
     Word lastSelected;
+    String language;
     @Override
     public void setDatabase(WordRepository wordRepository) {
         this.wordRepository=wordRepository;
     }
-
     @Override
     public String createAnswer(String language2) {
         String answer;
-        if ("polish".equalsIgnoreCase(language2)) { // if new language add there
+        if ("polish".equalsIgnoreCase(language)) { // if new language add there
             answer = lastSelected.getPolish();
-        } else if ("english".equalsIgnoreCase(language2)) {
+        } else if ("english".equalsIgnoreCase(language)) {
             answer = lastSelected.getEnglish();
         } else {
-            return "Unsupported language: " + language2;
+            return "Unsupported language: " + language;
         }
         return answer;
     }
-
     @Override
     public void createPair(String question, String answer) {
 result.add(new Pair(question,answer));
     }
     @Override
     public String createQuestion(Difficulty difficulty, String language1) {
+        language=language1;
         if(candidates==null) candidates = wordRepository.findWordsByDifficulty(difficulty.ordinal());
         if (!candidates.isEmpty()) {
             int randomIndex = (int) (Math.random() * candidates.size());
