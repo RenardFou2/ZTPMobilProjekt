@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/choice_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:textSize="20dp"
+        android:text="@string/choice_text"/>
+
+    <Button
+        android:id="@+id/test_choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_choice_button"
+        android:layout_below="@+id/choice_textView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"/>
+
+
+    <Button
+        android:id="@+id/learn_choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/learn_choice_button"
+        android:layout_below="@+id/choice_textView"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        />
+
+
+</RelativeLayout>

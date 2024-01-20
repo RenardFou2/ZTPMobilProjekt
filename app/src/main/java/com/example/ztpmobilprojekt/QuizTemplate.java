@@ -2,25 +2,45 @@ package com.example.ztpmobilprojekt;
 
 public abstract class QuizTemplate {
 
-    private String word;
-    private String answer;
+    private static int score = 0;
+    private String rightAnswer;
+    private String userAnswer;
 
-    public void check(){
 
-        if(verify()== true){
+    public boolean check(){
+
+        if(verify()){
             addScore();
         }
-        nextWord();
+        return nextWord();
     }
 
     public boolean verify(){
 
+        if(rightAnswer.equals(userAnswer)) return true;
+
         return false;
     }
 
-    public abstract void nextWord();
+    public abstract boolean nextWord();
 
-    public void addScore(){
-
+    public static void addScore(){
+        score++;
     }
+    public void setRightAnswer(String rightAnswer){
+        this.rightAnswer = rightAnswer;
+    }
+
+    public void setUserAnswer(String userAnswer) {
+        this.userAnswer = userAnswer;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public void setScore(int score){
+        this.score = score;
+    }
+
 }

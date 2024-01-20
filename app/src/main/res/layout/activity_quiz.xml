@@ -32,7 +32,8 @@
         android:layout_below="@id/question_word"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/checkBtn"

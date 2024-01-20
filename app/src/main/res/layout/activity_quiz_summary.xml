@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizSummaryActivity">
+
+    <TextView
+        android:id="@+id/quiz_summary_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textSize="30sp"
+        android:text="@string/quiz_summary_text"/>
+
+    <TextView
+        android:id="@+id/quiz_summary_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="70sp"
+        android:layout_below="@+id/quiz_summary_textView"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/quiz_summary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quiz_summary_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/quiz_summary_btn_text"/>
+
+</RelativeLayout>
