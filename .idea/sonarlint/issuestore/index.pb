@@ -5,17 +5,7 @@ j
 :app/src/main/java/com/example/ztpmobilprojekt/WordDAO.java,3\c\3ce25765d2525f2fa70d9dd0e85202ad3177536b
 o
 ?app/src/main/java/com/example/ztpmobilprojekt/WordDatabase.java,4\2\42f72ebba3bd001f55eecb5feeaa1cc17023c795
-q
-Aapp/src/main/java/com/example/ztpmobilprojekt/WordRepository.java,e\0\e078d27afdcc5ff117cf004d82e91e91229074a3
 D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-s
-Capp/src/main/java/com/example/ztpmobilprojekt/WordListActivity.java,b\4\b41093bd6e41252f3ff233a081b61908b17d8cf8
-p
-@app/src/main/java/com/example/ztpmobilprojekt/WordViewModel.java,2\b\2b893287734cb58e8619f355075a654b4f37c125
