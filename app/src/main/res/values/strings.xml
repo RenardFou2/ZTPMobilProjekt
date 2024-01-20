@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ZTPMobilProjekt</string>
     <string name="word_list_menu_button">List of words</string>
+    <string name="check_button">Check</string>
+    <string name="quiz_Text_View">Fill the blanks</string>
+    <string name="choice_text">Wybierz tryb quizu</string>
+    <string name="test_choice_button">Tryb testu</string>
+    <string name="learn_choice_button">Tryb nauki</string>
+    <string name="quiz_summary_text">Twoj wynik to</string>
+    <string name="quiz_summary_btn_text">Powrot</string>
 </resources>
