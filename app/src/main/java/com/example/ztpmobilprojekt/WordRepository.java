@@ -29,12 +29,9 @@ public class WordRepository {
     void delete(Word word){
         WordDatabase.databaseWriteExecutor.execute(() -> wordDao.delete(word));
     }
-
-    /*
-    void findWordsByDifficulty(int dif){
-        WordDatabase.databaseWriteExecutor.execute(() -> wordDao.findWordsByDifficulty(dif));
+    List<Word> findWordsByDifficulty(int dif){
+        return wordDao.findWordsByDifficulty(dif);
     }
-    */
 
     Word findWordByPolish(String polish) throws ExecutionException, InterruptedException {
         return WordDatabase.databaseWriteExecutor.submit(() -> wordDao.findWordByPolish(polish)).get();
