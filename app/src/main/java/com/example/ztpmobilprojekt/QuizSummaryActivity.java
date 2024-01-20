@@ -31,6 +31,6 @@ public class QuizSummaryActivity extends AppCompatActivity {
                 Intent i = new Intent(QuizSummaryActivity.this, QuizChoiceActivity.class);
                 startActivity(i);
             }
-        });  //TODO zmienic petle
-    }
+        });
+    }//TODO zmienic petle
 }
