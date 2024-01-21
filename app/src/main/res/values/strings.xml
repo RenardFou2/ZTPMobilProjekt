@@ -42,4 +42,9 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string-array name="mode_options">
+        <item>Fill the blanks</item>
+        <item>Translate</item>
+    </string-array>
 </resources>

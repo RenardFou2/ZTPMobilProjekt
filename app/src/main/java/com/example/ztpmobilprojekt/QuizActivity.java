@@ -27,13 +27,12 @@ public class QuizActivity extends AppCompatActivity {
     QuizTemplate quizType;
 
 
-    WordRepository repository = new WordRepository(getApplication()); //TODO nie działa jest bład
-
-
+    WordRepository repository;
     TranslateLevelBuilder builder;
+    List<Pair> pairs;
+    LevelDirector director;
 
-    LevelDirector director = new LevelDirector(builder,repository);
-    List<Pair> pairs = director.makeLevel(SettingsUtil.getDifficulty(),10,SettingsUtil.getMyLanguage(), SettingsUtil.getLearningLanguage());
+
 
 
 
@@ -61,6 +60,10 @@ public class QuizActivity extends AppCompatActivity {
                 }
             }
         }
+        builder =new TranslateLevelBuilder();
+        repository = new WordRepository(getApplication());
+        director = new LevelDirector(builder,repository);
+        pairs = director.makeLevel(SettingsUtil.getDifficulty(),2,SettingsUtil.getMyLanguage(), SettingsUtil.getLearningLanguage());
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
