@@ -28,9 +28,9 @@ public class QuizSummaryActivity extends AppCompatActivity {
         quizSumBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(QuizSummaryActivity.this, QuizChoiceActivity.class);
+                Intent i = new Intent(QuizSummaryActivity.this, MainActivity.class);
                 startActivity(i);
             }
         });
-    }//TODO zmienic petle
+    }
 }

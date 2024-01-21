@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".QuizChoiceActivity"
-            android:exported="false"> <!-- TODO zmienic laucher na MainActivity -->
+            android:exported="false"> <!-- TODO launcher -->
 
         </activity>
         <activity
