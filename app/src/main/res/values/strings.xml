@@ -10,6 +10,8 @@
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="translate">Translate</string>
+    <string name="fill_the_blanks">Fill the blanks</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -42,6 +44,8 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
 
     <string-array name="mode_options">
         <item>Fill the blanks</item>
