@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SettingsUtil.initialize(this);
 
         wordListButton = findViewById(R.id.wordListButton);
         startQuizButton = findViewById(R.id.startQuizButton);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         settingsButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
+            Log.d("SettingsActivity", "Difficulty: " + SettingsUtil.getDifficulty());
         });
 
 

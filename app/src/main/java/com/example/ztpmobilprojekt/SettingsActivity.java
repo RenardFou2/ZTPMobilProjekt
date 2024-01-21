@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -34,6 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
         setUpSpinner(difficultySpinner, R.array.difficulty_options, "difficulty");
         setUpSpinner(learningLanguageSpinner, R.array.learning_language_options, "learningLanguage");
         setUpSpinner(myLanguageSpinner, R.array.my_language_options, "myLanguage");
+        SettingsUtil.initialize(this);
     }
 
     private void setUpSpinner(Spinner spinner, int arrayResId, final String key) {
@@ -51,9 +53,11 @@ public class SettingsActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                Log.d("SettingsActivity", "Difficulty: " + SettingsUtil.getDifficulty());
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(key, parentView.getItemAtPosition(position).toString());
                 editor.apply();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
