@@ -1,7 +1,10 @@
 package com.example.ztpmobilprojekt;
 
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +15,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuizActivity extends AppCompatActivity {
 
     private Button checkButton;
@@ -21,10 +27,16 @@ public class QuizActivity extends AppCompatActivity {
     QuizTemplate quizType;
 
 
+    WordRepository repository = new WordRepository(getApplication()); //TODO nie działa jest bład
+
+
+    TranslateLevelBuilder builder;
+
+    LevelDirector director = new LevelDirector(builder,repository);
+    List<Pair> pairs = director.makeLevel(SettingsUtil.getDifficulty(),10,SettingsUtil.getMyLanguage(), SettingsUtil.getLearningLanguage());
 
 
 
-    //LevelDirector director = new LevelDirector(FillLevelBuilder());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +66,16 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                quizType.setRightAnswer(pairs[currentIndex].getAnswer());
+                quizType.setRightAnswer(pairs.get(currentIndex).getAnswer());
                 quizType.setUserAnswer(EditTextAnswer.getText().toString());
 
                 if(quizType.check()){
 
                     currentIndex = (currentIndex+1);
 
-                    if(currentIndex == pairs.length){
+                    if(currentIndex == pairs.size()){
                         int endScore = quizType.getScore();
-                        int maxScore = pairs.length;
+                        int maxScore = pairs.size();
                         Intent i = new Intent(QuizActivity.this, QuizSummaryActivity.class);
                         i.putExtra("endScore",endScore);
                         i.putExtra("maxScore",maxScore);
@@ -71,7 +83,7 @@ public class QuizActivity extends AppCompatActivity {
                         quizType.setScore(0);
 
                     }
-                    if(currentIndex< pairs.length) setNextQuestion();
+                    if(currentIndex< pairs.size()) setNextQuestion();
 
                 }
                 else {
@@ -81,15 +93,15 @@ public class QuizActivity extends AppCompatActivity {
 
             }
         });
-        TextViewQuestion.setText(pairs[currentIndex].getQuestion());
+        TextViewQuestion.setText(pairs.get(currentIndex).getQuestion());
     }
     public void setNextQuestion(){
-        TextViewQuestion.setText(pairs[currentIndex].getQuestion());
+        TextViewQuestion.setText(pairs.get(currentIndex).getQuestion());
     }
-    private Pair[] pairs = {
+    /*private Pair[] pairs = {
             new Pair("kupic", "buy"),
             new Pair("sprzedac", "sell"),
             new Pair("porzyczyc", "borrow"),
             new Pair("znalezc","find")
-    };  //TODO zmienic mockup pytan
+    };*/  //TODO zmienic mockup pytan
 }
