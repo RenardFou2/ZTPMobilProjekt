@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/difficultySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/difficultyLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/learningLanguageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learning Language:"
+        android:textSize="18sp"
+        android:layout_below="@id/difficultySpinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/learningLanguageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/learningLanguageLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/myLanguageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Language:"
+        android:textSize="18sp"
+        android:layout_below="@id/learningLanguageSpinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/myLanguageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myLanguageLabel"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

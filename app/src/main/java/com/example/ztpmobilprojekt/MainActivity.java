@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button wordListButton;
     private Button startQuizButton;
-
+    private Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         wordListButton = findViewById(R.id.wordListButton);
         startQuizButton = findViewById(R.id.startQuizButton);
+        settingsButton = findViewById(R.id.settingsButton);
 
         wordListButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, WordListActivity.class);
@@ -32,7 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        settingsButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        });
 
 
 
