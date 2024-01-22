@@ -10,6 +10,13 @@
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="translate">Translate</string>
+    <string name="fill_the_blanks">Fill the Blanks</string>
+
+    <!-- Quiz choice Titles -->
+
+
+
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -36,6 +43,11 @@
         <item>English</item>
     </string-array>
 
+    <string-array name="mode_options">
+        <item>Fill the blanks</item>
+        <item>Translate</item>
+    </string-array>
+
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -43,15 +55,14 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
-    <!-- Wordlist menu settings -->
-    <string name="menu_searchbar">Search</string>
-
-    <!-- EditWord prefs -->
     <string name="hint_word_difficulty">Poziom Trudności</string>
     <string name="hint_word_polish">Polski</string>
     <string name="hint_word_english">English</string>
     <string name="button_save">SAVE</string>
+    <string name="menu_searchbar">Search</string>
     <string name="word_added">Word added</string>
     <string name="word_edited">Word edited</string>
     <string name="empty_not_saved">Changes not saved</string>
+
+
 </resources>

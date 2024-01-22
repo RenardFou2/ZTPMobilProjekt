@@ -10,20 +10,22 @@ public class FillLevelBuilder implements ILevelBuilder {
     WordRepository wordRepository;
     List<Word> candidates;
     Word lastSelected;
-    String language;
+    String learnLanguage;
+
+
     @Override
     public void setDatabase(WordRepository wordRepository) {
         this.wordRepository=wordRepository;
     }
     @Override
-    public String createAnswer(String language2) {
+    public String createAnswer() {
         String answer;
-        if ("polish".equalsIgnoreCase(language)) { // if new language add there
+        if ("polish".equalsIgnoreCase(learnLanguage)) { // if new language add there
             answer = lastSelected.getPolish();
-        } else if ("english".equalsIgnoreCase(language)) {
+        } else if ("english".equalsIgnoreCase(learnLanguage)) {
             answer = lastSelected.getEnglish();
         } else {
-            return "Unsupported language: " + language;
+            return "Unsupported language: " + learnLanguage;
         }
         return answer;
     }
@@ -32,8 +34,7 @@ public class FillLevelBuilder implements ILevelBuilder {
 result.add(new Pair(question,answer));
     }
     @Override
-    public String createQuestion(Difficulty difficulty, String language1) {
-        language=language1;
+    public String createQuestion(Difficulty difficulty) {
         if(candidates==null) candidates = wordRepository.findWordsByDifficulty(difficulty.ordinal());
         if (!candidates.isEmpty()) {
             int randomIndex = (int) (Math.random() * candidates.size());
@@ -41,14 +42,14 @@ result.add(new Pair(question,answer));
             candidates.remove(randomIndex);
             lastSelected = selectedWord;
             String questionPreMod;
-            if ("polish".equalsIgnoreCase(language1)) { // if new language add there
+            if ("polish".equalsIgnoreCase(learnLanguage)) { // if new language add there
                 questionPreMod = selectedWord.getPolish();
-            } else if ("english".equalsIgnoreCase(language1)) {
+            } else if ("english".equalsIgnoreCase(learnLanguage)) {
                 questionPreMod = selectedWord.getEnglish();
             } else {
-                return "Unsupported language: " + language1;
+                return "Unsupported language: " + learnLanguage;
             }
-            double percentageToHide = 0.3; // 30% of letters will be hidden
+            double percentageToHide = 0.35; // 30% of letters will be hidden
             int lettersToHide = (int) (questionPreMod.length() * percentageToHide);
             List<Integer> indicesToHide = new ArrayList<>();
             while (indicesToHide.size() < lettersToHide) {
@@ -67,6 +68,10 @@ result.add(new Pair(question,answer));
         } else {
             return "No words available for the specified difficulty.";
         }
+    }
+    @Override
+    public void setLanguage(String learn, String my){
+        this.learnLanguage = learn;
     }
     @Override
     public List<Pair> getList() {

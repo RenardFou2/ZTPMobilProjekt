@@ -76,7 +76,7 @@ public class QuizActivity extends AppCompatActivity {
 
         repository = new WordRepository(getApplication());
         director = new LevelDirector(builder,repository);
-        pairs = director.makeLevel(SettingsUtil.getDifficulty(),2,SettingsUtil.getMyLanguage(), SettingsUtil.getLearningLanguage());
+        pairs = director.makeLevel(SettingsUtil.getDifficulty(),10,SettingsUtil.getLearningLanguage(), SettingsUtil.getMyLanguage());
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
