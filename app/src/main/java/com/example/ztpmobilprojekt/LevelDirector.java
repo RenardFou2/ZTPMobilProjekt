@@ -19,10 +19,10 @@ public class LevelDirector {
         return Builder;
     }
 
-    public List<Pair> makeLevel(Difficulty difficulty, int length, String language1, String language2)
+    public List<Pair> makeLevel(Difficulty difficulty, int length, String learnLanguage, String myLanguage)
     {
         Builder.setDatabase(wordRepository);
-        Builder.setLanguage(language1,language2);
+        Builder.setLanguage(learnLanguage,myLanguage);
         for(int i=0; i<length;i++)
         {
             Builder.createPair(

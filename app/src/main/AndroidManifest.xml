@@ -24,7 +24,7 @@
             android:exported="false" />
         <activity
             android:name=".QuizChoiceActivity"
-            android:exported="false"> <!-- TODO launcher -->
+            android:exported="false">
 
         </activity>
         <activity

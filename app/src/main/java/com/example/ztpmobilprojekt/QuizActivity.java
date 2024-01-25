@@ -60,12 +60,12 @@ public class QuizActivity extends AppCompatActivity {
         if (extras != null) {
             switch(extras.getInt("quizChoice")){
                 case 0: {
-                    textButton.setText(R.string.fill_the_blanks);  //TODO zmienic hardcode
+                    textButton.setText(R.string.fill_the_blanks);
                     builder = new FillLevelBuilder();
                     break;
                 }
                 case 1: {
-                    textButton.setText(R.string.translate);  //TODO zmienic hardcode1
+                    textButton.setText(R.string.translate);
                     builder = new TranslateLevelBuilder();
                     break;
                 }
@@ -76,7 +76,7 @@ public class QuizActivity extends AppCompatActivity {
 
         repository = new WordRepository(getApplication());
         director = new LevelDirector(builder,repository);
-        pairs = director.makeLevel(SettingsUtil.getDifficulty(),10,SettingsUtil.getLearningLanguage(), SettingsUtil.getMyLanguage());
+        pairs = director.makeLevel(SettingsUtil.getDifficulty(),4,SettingsUtil.getLearningLanguage(), SettingsUtil.getMyLanguage());
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,10 +114,5 @@ public class QuizActivity extends AppCompatActivity {
     public void setNextQuestion(){
         textViewQuestion.setText(pairs.get(currentIndex).getQuestion());
     }
-   /* private Pair[] pairs = {
-            new Pair("kupic", "buy"),
-            new Pair("sprzedac", "sell"),
-            new Pair("porzyczyc", "borrow"),
-            new Pair("znalezc","find")
-    }; */ //TODO zmienic mockup pytan
+
 }
