@@ -53,3 +53,7 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 @
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+o
+?app/src/main/java/com/example/ztpmobilprojekt/WordsMemento.java,4\9\4916e11b77b56fceccf82073afb57be9d57b45d0
+p
+@app/src/main/java/com/example/ztpmobilprojekt/WordOperation.java,1\f\1f0d026fb188c360dd0ac7024d50de8544a59617

@@ -26,7 +26,7 @@ import java.util.List;
 public class WordListActivity extends AppCompatActivity {
 
     private WordViewModel wordViewModel;
-
+    private WordsMemento wordsMemento;
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
     public static final int EDIT_WORD_ACTIVITY_REQUEST_CODE = 2;
     private Word editedWord = null;
@@ -74,8 +74,15 @@ public class WordListActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_undo) {
+            wordViewModel.undo();
             return true;
+        }
+        else if (id == R.id.action_save_snap){
+            wordsMemento=wordViewModel.saveStateToMemento();
+        }
+        else if (id == R.id.action_load_snap){
+            wordViewModel.restoreStateFromMemento(wordsMemento);
         }
 
         return super.onOptionsItemSelected(item);

@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.ztpmobilprojekt.WordListActivity">>
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_undo"
         android:orderInCategory="100"
-        android:title="@string/menu_searchbar"
+        android:title="@string/menu_undo"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_save_snap"
+        android:orderInCategory="100"
+        android:title="@string/menu_save_snap"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_load_snap"
+        android:orderInCategory="100"
+        android:title="@string/menu_load_snap"
         app:showAsAction="never"/>
 </menu>
