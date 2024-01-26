@@ -2,21 +2,28 @@
     <string name="app_name">ZTPMobilProjekt</string>
     <string name="word_list_menu_button">List of words</string>
     <string name="start_quiz_button_text">Start quiz</string>
-    <string name="check_button">Check</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+
+    <!-- Quiz activity  -->
     <string name="quiz_Text_View">Fill the blanks</string>
+    <string name="translate">Translate</string>
+    <string name="fill_the_blanks">Fill the Blanks</string>
+    <string name="check_button">Check</string>
+
+    <!-- Quiz choice activity -->
+    <string-array name="mode_options">
+        <item>Fill the blanks</item>
+        <item>Translate</item>
+    </string-array>
+
     <string name="choice_text">Choose quiz mode</string>
     <string name="test_choice_button">Test mode</string>
     <string name="learn_choice_button">Learning mode</string>
+
+    <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
-    <string name="title_activity_settings">SettingsActivity</string>
-    <string name="translate">Translate</string>
-    <string name="fill_the_blanks">Fill the Blanks</string>
-
-    <!-- Quiz choice Titles -->
-
-
-
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -43,10 +50,7 @@
         <item>English</item>
     </string-array>
 
-    <string-array name="mode_options">
-        <item>Fill the blanks</item>
-        <item>Translate</item>
-    </string-array>
+
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
@@ -64,5 +68,16 @@
     <string name="word_edited">Word edited</string>
     <string name="empty_not_saved">Changes not saved</string>
 
+    <!-- Dictionary activity  -->
+    <string name="dictionaryTitle">Dictionary</string>
+    <string name="dictionary_edit_text">Type in word</string>
+    <string name="dictionary_button_text">Search</string>
+    <string name="definition_title_text_view">Definition</string>
+    <string name="word_title_text_view">Word</string>
+    <string name="phonetics_title_text_view">Phonetics</string>
+    <string name="pos_title_text_view">Part of speech</string>
+    <string name="dictionary_content">Content</string>
+    <string name="request_success">Request Success</string>
+    <string name="request_error">Request error</string>
 
 </resources>

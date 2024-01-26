@@ -6,6 +6,7 @@ android {
     namespace = "com.example.ztpmobilprojekt"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.example.ztpmobilprojekt"
         minSdk = 24
@@ -36,6 +37,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.room:room-common:2.6.1")
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")

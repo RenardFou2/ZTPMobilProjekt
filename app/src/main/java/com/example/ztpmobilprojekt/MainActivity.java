@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button wordListButton;
     private Button startQuizButton;
     private Button settingsButton;
+    private Button translateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         wordListButton = findViewById(R.id.wordListButton);
         startQuizButton = findViewById(R.id.startQuizButton);
         settingsButton = findViewById(R.id.settingsButton);
+        translateButton = findViewById(R.id.translateButton);
+
 
         wordListButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, WordListActivity.class);
@@ -39,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
             Log.d("SettingsActivity", "Difficulty: " + SettingsUtil.getDifficulty());
+        });
+
+        translateButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, DictionaryActivity.class);
+            startActivity(intent);
+
         });
 
 
