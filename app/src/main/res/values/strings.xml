@@ -24,6 +24,7 @@
     <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
+    <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -59,11 +60,17 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
+    <!-- Wordlist menu settings -->
+    <string name="menu_searchbar">Search</string>
+    <string name="menu_undo">Undo</string>
+    <string name="menu_save_snap">Save snapshot</string>
+    <string name="menu_load_snap">Load snapshot</string>
+
+    <!-- EditWord prefs -->
     <string name="hint_word_difficulty">Poziom Trudności</string>
     <string name="hint_word_polish">Polski</string>
     <string name="hint_word_english">English</string>
     <string name="button_save">SAVE</string>
-    <string name="menu_searchbar">Search</string>
     <string name="word_added">Word added</string>
     <string name="word_edited">Word edited</string>
     <string name="empty_not_saved">Changes not saved</string>
@@ -80,4 +87,6 @@
     <string name="request_success">Request Success</string>
     <string name="request_error">Request error</string>
 
+    <string name="fill_the_blanks">Fill the blanks</string>
+    <string name="translate">Translate</string>
 </resources>
