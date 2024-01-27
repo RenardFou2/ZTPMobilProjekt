@@ -157,6 +157,7 @@ public class WordListActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            Log.d("database", "editing word with ID "+this.word.getId());
             WordListActivity.this.editedWord = this.word;
             WordListActivity.this.oldWord = this.word;
             Intent intent = new Intent(WordListActivity.this, EditWordActivity.class);
