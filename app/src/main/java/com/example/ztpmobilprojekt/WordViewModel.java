@@ -17,6 +17,7 @@ public class WordViewModel extends AndroidViewModel {
 
     private final WordRepository wordRepository;
     private LiveData<List<Word>> words;
+    private Word wordTemp = null;
     private List<Word> currentWordState;
     private final List<WordOperation> operationHistory;
 
@@ -37,15 +38,19 @@ public class WordViewModel extends AndroidViewModel {
     }
 
     public LiveData<List<Word>> findAll() { return words; }
-    public void insert(Word word){
-        Log.d("database", "Inserting word with ID "+word.getId());
+    public void insert(Word word) throws ExecutionException, InterruptedException {
         wordRepository.insert(word);
-        operationHistory.add(new WordOperation(WordOperation.Type.ADD, word));
+
+        wordTemp = findWordByParams(word.getDifficulty(), word.getPolish(), word.getEnglish());
+        Log.d("database", "Inserted word with ID "+wordTemp.getId());
+        operationHistory.add(new WordOperation(WordOperation.Type.ADD, wordTemp));
         updateCurrentState();
     }
-    public void update(Word word, Word oldWord){
-        Log.d("database", "updating word with ID "+word.getId()+" old word ID is "+oldWord.getId());
+    public void update(Word word, Word oldWord) throws ExecutionException, InterruptedException {
         wordRepository.update(word);
+        wordTemp = findWordByParams(word.getDifficulty(), word.getPolish(), word.getEnglish());
+        Log.d("database", "updated word has ID "+wordTemp.getId());
+        oldWord.setId(wordTemp.getId());
         operationHistory.add(new WordOperation(WordOperation.Type.MODIFY, oldWord));
         updateCurrentState();
     }
@@ -58,13 +63,22 @@ public class WordViewModel extends AndroidViewModel {
     public Word findWordByPolish(String Polish) throws ExecutionException, InterruptedException {return wordRepository.findWordByPolish(Polish);}
     public Word findWordByEnglish(String English) throws ExecutionException, InterruptedException {return wordRepository.findWordByEnglish(English);}
 
+    public Word findWordByParams(int difficulty, String polish, String english) throws ExecutionException, InterruptedException {
+        return wordRepository.findWordByParams(difficulty,polish,english);
+    }
     public WordsMemento saveStateToMemento() {
         return new WordsMemento(currentWordState);
     }
 
     public void restoreStateFromMemento(WordsMemento memento) {
+        wordRepository.deleteAll();
         currentWordState.clear();
         currentWordState.addAll(memento.getWords());
+
+        for (int i = 0; i< memento.getWords().size(); i++){
+            wordRepository.insert(memento.getWords().get(i));
+        }
+
         words = new MutableLiveData<>(currentWordState);
         updateCurrentState();
     }

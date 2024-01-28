@@ -22,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class WordListActivity extends AppCompatActivity {
 
@@ -106,7 +107,13 @@ public class WordListActivity extends AppCompatActivity {
                 Word word = new Word(Integer.parseInt(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_DIFFICULTY)),
                         data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_POLISH),
                         data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_ENGLISH));
-                wordViewModel.insert(word);
+                try {
+                    wordViewModel.insert(word);
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 Snackbar.make(findViewById(R.id.coordinator_layout),
                                 getString(R.string.word_added),
                                 Snackbar.LENGTH_LONG)
@@ -116,7 +123,13 @@ public class WordListActivity extends AppCompatActivity {
                 editedWord.setDifficulty(Integer.parseInt(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_DIFFICULTY)));
                 editedWord.setPolish(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_POLISH));
                 editedWord.setEnglish(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_ENGLISH));
-                wordViewModel.update(editedWord, oldWord);
+                try {
+                    wordViewModel.update(editedWord, oldWord);
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 editedWord = null;
                 Snackbar.make(findViewById(R.id.coordinator_layout),
                                 getString(R.string.word_edited),

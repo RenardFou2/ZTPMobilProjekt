@@ -24,7 +24,6 @@
     <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
-    <string name="title_activity_settings">SettingsActivity</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -87,8 +86,5 @@
     <string name="dictionary_content">Content</string>
     <string name="request_success">Request Success</string>
     <string name="request_error">Request error</string>
-
-    <string name="fill_the_blanks">Fill the blanks</string>
-    <string name="translate">Translate</string>
 
 </resources>
