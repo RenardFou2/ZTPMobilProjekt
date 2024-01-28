@@ -41,7 +41,7 @@ public class DictionaryDataService {
                 try {
                     requestedObj = response.getJSONObject(0);
                     meanings = requestedObj.getJSONArray("meanings");
-                    Toast.makeText(context,R.string.request_success,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, R.string.request_success,Toast.LENGTH_SHORT).show();
                     volleyResponseListener.onResponse(requestedObj);
                 } catch (JSONException e) {
                     throw new RuntimeException(e);

@@ -1,6 +1,5 @@
 package com.example.ztpmobilprojekt;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class LevelDirector {

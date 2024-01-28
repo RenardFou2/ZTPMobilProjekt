@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LuckyWordActivity">
+
+    <TextView
+        android:id="@+id/luckyWordTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:text="@string/lucky_title_text_view" />
+
+    <TextView
+        android:id="@+id/luckyWordLearnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/luckyWordTitleView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:text="@string/lucky_content_text_view" />
+
+    <TextView
+        android:id="@+id/luckyWordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/luckyWordLearnTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:text="@string/lucky_text_view" />
+
+    <TextView
+        android:id="@+id/luckyWordMyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/luckyWordTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:text="@string/lucky_content_text_view" />
+
+    <TextView
+        android:id="@+id/luckyWordShakeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="20sp"
+        android:text="@string/lucky_shake_text_view" />
+
+
+</RelativeLayout>

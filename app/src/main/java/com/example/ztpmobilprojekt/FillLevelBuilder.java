@@ -1,7 +1,5 @@
 package com.example.ztpmobilprojekt;
 
-import static com.example.ztpmobilprojekt.WordDatabase.getDatabase;
-
 import java.util.ArrayList;
 import java.util.List;
 
