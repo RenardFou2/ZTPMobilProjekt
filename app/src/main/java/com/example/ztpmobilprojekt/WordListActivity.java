@@ -30,6 +30,7 @@ public class WordListActivity extends AppCompatActivity {
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
     public static final int EDIT_WORD_ACTIVITY_REQUEST_CODE = 2;
     private Word editedWord = null;
+    private Word oldWord = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,15 @@ public class WordListActivity extends AppCompatActivity {
             wordsMemento=wordViewModel.saveStateToMemento();
         }
         else if (id == R.id.action_load_snap){
-            wordViewModel.restoreStateFromMemento(wordsMemento);
+            if(wordsMemento == null){
+                Snackbar.make(findViewById(R.id.coordinator_layout),
+                                getString(R.string.load_failed),
+                                Snackbar.LENGTH_LONG)
+                        .show();
+            }
+            else{
+                wordViewModel.restoreStateFromMemento(wordsMemento);
+            }
         }
 
         return super.onOptionsItemSelected(item);
@@ -107,7 +116,7 @@ public class WordListActivity extends AppCompatActivity {
                 editedWord.setDifficulty(Integer.parseInt(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_DIFFICULTY)));
                 editedWord.setPolish(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_POLISH));
                 editedWord.setEnglish(data.getStringExtra(EditWordActivity.EXTRA_EDIT_WORD_ENGLISH));
-                wordViewModel.update(editedWord);
+                wordViewModel.update(editedWord, oldWord);
                 editedWord = null;
                 Snackbar.make(findViewById(R.id.coordinator_layout),
                                 getString(R.string.word_edited),
@@ -148,7 +157,9 @@ public class WordListActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
+            Log.d("database", "editing word with ID "+this.word.getId());
             WordListActivity.this.editedWord = this.word;
+            WordListActivity.this.oldWord = this.word;
             Intent intent = new Intent(WordListActivity.this, EditWordActivity.class);
             intent.putExtra(EditWordActivity.EXTRA_EDIT_WORD_DIFFICULTY, word.getDifficulty());
             intent.putExtra(EditWordActivity.EXTRA_EDIT_WORD_POLISH, word.getPolish());

@@ -43,10 +43,10 @@ public class WordViewModel extends AndroidViewModel {
         operationHistory.add(new WordOperation(WordOperation.Type.ADD, word));
         updateCurrentState();
     }
-    public void update(Word word){
-        Log.d("database", "updating word with ID "+word.getId());
+    public void update(Word word, Word oldWord){
+        Log.d("database", "updating word with ID "+word.getId()+" old word ID is "+oldWord.getId());
         wordRepository.update(word);
-        operationHistory.add(new WordOperation(WordOperation.Type.MODIFY, word));
+        operationHistory.add(new WordOperation(WordOperation.Type.MODIFY, oldWord));
         updateCurrentState();
     }
     public void delete(Word word){
