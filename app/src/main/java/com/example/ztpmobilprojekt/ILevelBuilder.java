@@ -1,4 +1,8 @@
 package com.example.ztpmobilprojekt;
+import com.example.ztpmobilprojekt.Difficulty;
+import com.example.ztpmobilprojekt.Pair;
+import com.example.ztpmobilprojekt.WordRepository;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,6 +3,7 @@ package com.example.ztpmobilprojekt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +35,11 @@ public class DictionaryActivity extends AppCompatActivity {
         partOfSpeechTextView = findViewById(R.id.partOfSpeechTextView);
         definitionTextView = findViewById(R.id.definitionTextView);
 
+        wordTextView.setVisibility(View.INVISIBLE);
+        phoneticTextView.setVisibility(View.INVISIBLE);
+        partOfSpeechTextView.setVisibility(View.INVISIBLE);
+        definitionTextView.setVisibility(View.INVISIBLE);
+
 
         dictionaryButton.setOnClickListener(view -> {
 
@@ -51,6 +57,11 @@ public class DictionaryActivity extends AppCompatActivity {
 
                     try {
 
+                        wordTextView.setVisibility(View.VISIBLE);
+                        phoneticTextView.setVisibility(View.VISIBLE);
+                        partOfSpeechTextView.setVisibility(View.VISIBLE);
+                        definitionTextView.setVisibility(View.VISIBLE);
+
                         wordInput.setText("");
                         wordTextView.setText(dictionaryDataService.getWord());
                         phoneticTextView.setText(dictionaryDataService.getPhonetic());
@@ -60,16 +71,8 @@ public class DictionaryActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
-
                 }
             });
-
-
-
         });
-
     }
-
-
-
 }

@@ -16,7 +16,7 @@ public class SettingsUtil {
     }
 
     public static String getLearningLanguage() {
-        return sharedPreferences.getString("learningLanguage", "Polish");
+        return sharedPreferences.getString("learningLanguage", "English");
     }
 
     public static String getMyLanguage() {
