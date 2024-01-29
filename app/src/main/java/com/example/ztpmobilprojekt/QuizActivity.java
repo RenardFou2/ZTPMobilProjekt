@@ -1,12 +1,14 @@
 package com.example.ztpmobilprojekt;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -24,14 +30,26 @@ public class QuizActivity extends AppCompatActivity {
     private Button textButton;
     private EditText editTextAnswer;
     private int currentIndex = 0;
+    public static final String TAG="currentIndex";
+    public static final String KEY_CURRENT_INDEX="currentIndex";
 
     QuizTemplate quizType;
     WordRepository repository;
     ILevelBuilder builder;
     List<Pair> pairs;
     LevelDirector director;
+    Gson gson = new Gson();
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState){
+        super.onSaveInstanceState(outState);
+
+        String jsonList = gson.toJson(pairs);
+        outState.putString("list",jsonList);
+        outState.putInt(KEY_CURRENT_INDEX,currentIndex);
 
 
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -76,9 +94,18 @@ public class QuizActivity extends AppCompatActivity {
             }
         }
 
-        repository = new WordRepository(getApplication());
-        director = new LevelDirector(builder,repository);
-        pairs = director.makeLevel(SettingsUtil.getDifficulty(),4,SettingsUtil.getLearningLanguage(), SettingsUtil.getMyLanguage());
+        if(savedInstanceState!=null){
+
+            String list = savedInstanceState.getString("list");
+            pairs = gson.fromJson(list, new TypeToken<List<Pair>>(){}.getType());
+            currentIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
+        }
+        else{
+            repository = new WordRepository(getApplication());
+            director = new LevelDirector(builder,repository);
+            pairs = director.makeLevel(SettingsUtil.getDifficulty(),4,SettingsUtil.getLearningLanguage(), SettingsUtil.getMyLanguage());
+        }
+
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
