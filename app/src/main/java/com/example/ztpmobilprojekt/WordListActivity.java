@@ -65,7 +65,7 @@ public class WordListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(WordListActivity.this, SearchWordActivity.class);
-                startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
+                startActivity(intent);
             }
         });
     }

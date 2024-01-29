@@ -112,7 +112,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 quizType.setRightAnswer(pairs.get(currentIndex).getAnswer());
-                quizType.setUserAnswer(editTextAnswer.getText().toString());
+                quizType.setUserAnswer(editTextAnswer.getText().toString().toLowerCase());
 
                 if(quizType.check()){
 

@@ -110,4 +110,17 @@
     <string name="lucky_latitude_title_view">Szerokość geograficzna</string>
     <string name="lucky_longitude_title_view">Długość geograficzna</string>
 
+    <!-- Search Word activity -->
+    <string name="easy_check_box">Łatwe</string>
+    <string name="medium_check_box">Średne</string>
+    <string name="hard_check_box">Trudne</string>
+    <string name="search_button">Szukaj</string>
+    <string name="search_language_text_view">Wybierz język</string>
+    <string-array name="search_language_options">
+        <item>Polish</item>
+        <item>English</item>
+    </string-array>
+    <string name="search_success">Wyszukiwanie zakończono powodzeniem</string>
+    <string name="search_error">Wyszukiwanie zakończono niepowodzeniem</string>
+
 </resources>
