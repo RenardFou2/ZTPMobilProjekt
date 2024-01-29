@@ -45,6 +45,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.preference:preference:1.2.0")
     implementation("com.google.code.gson:gson:2.8.7")
+    implementation("com.google.android.gms:play-services-location:21.1.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

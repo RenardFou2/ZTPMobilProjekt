@@ -100,9 +100,13 @@
     <string name="request_success">Request Success</string>
     <string name="request_error">Request error</string>
 
+    <!-- Lucky Word Activity -->
     <string name="lucky_title_text_view">YOUR LUCKY WORD IS</string>
     <string name="lucky_content_text_view">  </string>
     <string name="lucky_text_view">means</string>
     <string name="lucky_shake_text_view">Shake</string>
+    <string name="lucky_latitude_title_view">Latitude</string>
+    <string name="lucky_longitude_title_view">Longitude</string>
+
 
 </resources>

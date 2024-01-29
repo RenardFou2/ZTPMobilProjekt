@@ -107,5 +107,7 @@
     <string name="lucky_content_text_view">  </string>
     <string name="lucky_text_view">oznacza</string>
     <string name="lucky_shake_text_view">Potrząśnij</string>
+    <string name="lucky_latitude_title_view">Szerokość geograficzna</string>
+    <string name="lucky_longitude_title_view">Długość geograficzna</string>
 
 </resources>
