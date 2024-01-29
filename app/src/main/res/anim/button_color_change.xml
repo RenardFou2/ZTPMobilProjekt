@@ -1,0 +1,22 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/bounce_interpolator">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <!-- Red color -->
+        <objectAnimator
+            android:propertyName="backgroundColor"
+            android:valueTo="#ff0000"
+        android:valueType="colorType"
+        android:duration="300"/>
+    </item>
+    <item>
+        <!-- Blue color -->
+        <objectAnimator
+            android:propertyName="backgroundColor"
+            android:valueTo="#0000ff"
+        android:valueType="colorType"
+        android:duration="300"/>
+            </item>
+        </selector>
+    </set>
