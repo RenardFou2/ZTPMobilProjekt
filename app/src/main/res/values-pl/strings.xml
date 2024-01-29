@@ -27,6 +27,7 @@
     <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Twój wynik to</string>
     <string name="quiz_summary_btn_text">Powrót</string>
+    <string name="notification_title">GRATULACJE</string>
 
 
     <!-- Preference Titles -->

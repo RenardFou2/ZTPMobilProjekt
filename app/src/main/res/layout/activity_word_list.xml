@@ -25,6 +25,16 @@
             tools:listitem="@layout/word_list_item" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/search_word_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/add_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/buttonColor"
+            android:src="@drawable/search_button_icon"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
