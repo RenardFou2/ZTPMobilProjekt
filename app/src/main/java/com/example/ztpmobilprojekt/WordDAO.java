@@ -36,4 +36,8 @@ public interface WordDAO {
 
     @Query("SELECT * FROM word WHERE english LIKE :english")
     Word findWordByEnglish(String english);
+
+
+    @Query("SELECT * FROM word WHERE difficulty LIKE :difficulty AND polish LIKE :polish AND english LIKE :english")
+    Word findWordByParams(int difficulty, String polish, String english);
 }

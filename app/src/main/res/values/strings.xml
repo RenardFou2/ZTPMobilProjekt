@@ -3,8 +3,6 @@
     <string name="word_list_menu_button">List of words</string>
     <string name="start_quiz_button_text">Start quiz</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string name="settings_button_text">Settings</string>
-    <string name="luckyWord_button_text">Lucky Word</string>
 
 
     <!-- Quiz activity  -->
@@ -26,7 +24,6 @@
     <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Your score is</string>
     <string name="quiz_summary_btn_text">Back</string>
-
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -64,6 +61,7 @@
     </string-array>
 
 
+
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -99,9 +97,4 @@
     <string name="request_success">Request Success</string>
     <string name="request_error">Request error</string>
 
-    <!-- Lucky word activity -->
-    <string name="lucky_title_text_view">YOUR LUCKY WORD IS</string>
-    <string name="lucky_content_text_view">  </string>
-    <string name="lucky_text_view">means</string>
-    <string name="lucky_shake_text_view">Shake</string>
 </resources>
