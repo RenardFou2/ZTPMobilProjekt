@@ -27,6 +27,7 @@
     <!-- Quiz summary activity  -->
     <string name="quiz_summary_text">Twój wynik to</string>
     <string name="quiz_summary_btn_text">Powrót</string>
+    <string name="notification_title">GRATULACJE</string>
 
 
     <!-- Preference Titles -->
@@ -106,5 +107,20 @@
     <string name="lucky_content_text_view">  </string>
     <string name="lucky_text_view">oznacza</string>
     <string name="lucky_shake_text_view">Potrząśnij</string>
+    <string name="lucky_latitude_title_view">Szerokość geograficzna</string>
+    <string name="lucky_longitude_title_view">Długość geograficzna</string>
+
+    <!-- Search Word activity -->
+    <string name="easy_check_box">Łatwe</string>
+    <string name="medium_check_box">Średne</string>
+    <string name="hard_check_box">Trudne</string>
+    <string name="search_button">Szukaj</string>
+    <string name="search_language_text_view">Wybierz język</string>
+    <string-array name="search_language_options">
+        <item>Polish</item>
+        <item>English</item>
+    </string-array>
+    <string name="search_success">Wyszukiwanie zakończono powodzeniem</string>
+    <string name="search_error">Wyszukiwanie zakończono niepowodzeniem</string>
 
 </resources>

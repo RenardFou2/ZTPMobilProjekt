@@ -36,40 +36,40 @@ public abstract class WordDatabase extends RoomDatabase {
             databaseWriteExecutor.execute(() -> {
                 WordDAO dao = databaseInstance.wordDao();
                 // Difficulty 0 (Easy)
-                Word word1 = new Word(0, "Kot", "Cat");
-                Word word2 = new Word(0, "Pies", "Dog");
-                Word word3 = new Word(0, "Słońce", "Sun");
-                Word word4 = new Word(0, "Drzewo", "Tree");
-                Word word5 = new Word(0, "Woda", "Water");
-                Word word6 = new Word(0, "Szczęśliwy", "Happy");
-                Word word7 = new Word(0, "Przyjaciel", "Friend");
-                Word word8 = new Word(0, "Dzień", "Day");
-                Word word9 = new Word(0, "Książka", "Book");
-                Word word10 = new Word(0, "Niebieski", "Blue");
+                Word word1 = new Word(0, "kot", "cat");
+                Word word2 = new Word(0, "pies", "dog");
+                Word word3 = new Word(0, "słońce", "sun");
+                Word word4 = new Word(0, "drzewo", "tree");
+                Word word5 = new Word(0, "woda", "water");
+                Word word6 = new Word(0, "szczęśliwy", "happy");
+                Word word7 = new Word(0, "przyjaciel", "friend");
+                Word word8 = new Word(0, "dzień", "day");
+                Word word9 = new Word(0, "książka", "book");
+                Word word10 = new Word(0, "niebieski", "blue");
 
                 // Difficulty 1 (Medium)
-                Word word11 = new Word(1, "Komputer", "Computer");
-                Word word12 = new Word(1, "Ogród", "Garden");
-                Word word13 = new Word(1, "Góra", "Mountain");
-                Word word14 = new Word(1, "Szczęście", "Happiness");
-                Word word15 = new Word(1, "Podróż", "Travel");
-                Word word16 = new Word(1, "Język", "Language");
-                Word word17 = new Word(1, "Ćwiczenie", "Exercise");
-                Word word18 = new Word(1, "Przygoda", "Adventure");
-                Word word19 = new Word(1, "Piękny", "Beautiful");
-                Word word20 = new Word(1, "Wyzwanie", "Challenge");
+                Word word11 = new Word(1, "komputer", "computer");
+                Word word12 = new Word(1, "ogród", "garden");
+                Word word13 = new Word(1, "góra", "mountain");
+                Word word14 = new Word(1, "szczęście", "happiness");
+                Word word15 = new Word(1, "podróż", "travel");
+                Word word16 = new Word(1, "język", "language");
+                Word word17 = new Word(1, "ćwiczenie", "exercise");
+                Word word18 = new Word(1, "przygoda", "adventure");
+                Word word19 = new Word(1, "piękny", "beautiful");
+                Word word20 = new Word(1, "wyzwanie", "challenge");
 
                 // Difficulty 2 (Hard)
-                Word word21 = new Word(2, "Efemeryczny", "Ephemeral");
-                Word word22 = new Word(2, "Podstępny", "Surreptitious");
-                Word word23 = new Word(2, "Dona Kichota", "Quixotic");
-                Word word24 = new Word(2, "Szkodliwy", "Pernicious");
-                Word word25 = new Word(2, "Powszechny", "Ubiquitous");
-                Word word26 = new Word(2, "Idiosynkrazja", "Idiosyncrasy");
-                Word word27 = new Word(2, "Lizus", "Sycophant");
-                Word word28 = new Word(2, "Zaciemniać", "Obfuscate");
-                Word word29 = new Word(2, "Kakofonia", "Cacophony");
-                Word word30 = new Word(2, "Ezoteryczny", "Esoteric");
+                Word word21 = new Word(2, "efemeryczny", "ephemeral");
+                Word word22 = new Word(2, "podstępny", "surreptitious");
+                Word word23 = new Word(2, "dona kichota", "quixotic");
+                Word word24 = new Word(2, "szkodliwy", "pernicious");
+                Word word25 = new Word(2, "powszechny", "ubiquitous");
+                Word word26 = new Word(2, "idiosynkrazja", "idiosyncrasy");
+                Word word27 = new Word(2, "lizus", "sycophant");
+                Word word28 = new Word(2, "zaciemniać", "obfuscate");
+                Word word29 = new Word(2, "kakofonia", "cacophony");
+                Word word30 = new Word(2, "ezoteryczny", "esoteric");
 
                 // Inserting into the database
                 dao.insert(word1);

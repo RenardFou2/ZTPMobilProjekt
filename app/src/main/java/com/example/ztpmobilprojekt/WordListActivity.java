@@ -52,11 +52,20 @@ public class WordListActivity extends AppCompatActivity {
         });
 
         FloatingActionButton addBookButton = findViewById(R.id.add_button);
+        FloatingActionButton searchWordButton = findViewById(R.id.search_word_button);
         addBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(WordListActivity.this, EditWordActivity.class);
                 startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
+            }
+        });
+
+        searchWordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WordListActivity.this, SearchWordActivity.class);
+                startActivity(intent);
             }
         });
     }

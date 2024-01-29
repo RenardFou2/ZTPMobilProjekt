@@ -23,6 +23,6 @@ public class SettingsUtil {
         return sharedPreferences.getString("myLanguage", "Polish");
     }
     public static String getAppLanguage() {
-        return sharedPreferences.getString("appLanguage", "EN");
+        return sharedPreferences.getString("appLanguage", "PL");
     }
 }
