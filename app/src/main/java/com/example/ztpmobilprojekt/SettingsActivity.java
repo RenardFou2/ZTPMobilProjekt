@@ -1,22 +1,30 @@
 package com.example.ztpmobilprojekt;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class SettingsActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
-    private Spinner difficultySpinner, learningLanguageSpinner, myLanguageSpinner;
+    private Spinner difficultySpinner, learningLanguageSpinner, myLanguageSpinner, languageSpinner;
+    private Button settingsBackButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,12 +38,25 @@ public class SettingsActivity extends AppCompatActivity {
         difficultySpinner = findViewById(R.id.difficultySpinner);
         learningLanguageSpinner = findViewById(R.id.learningLanguageSpinner);
         myLanguageSpinner = findViewById(R.id.myLanguageSpinner);
+        languageSpinner = findViewById(R.id.languageSpinner);
+        settingsBackButton = findViewById(R.id.settingsBackButton);
 
         // Set up Spinners
         setUpSpinner(difficultySpinner, R.array.difficulty_options, "difficulty");
         setUpSpinner(learningLanguageSpinner, R.array.learning_language_options, "learningLanguage");
         setUpSpinner(myLanguageSpinner, R.array.my_language_options, "myLanguage");
+        setUpSpinner(languageSpinner, R.array.language_options, "appLanguage");
         SettingsUtil.initialize(this);
+
+        settingsBackButton.setOnClickListener(view -> {
+            Log.i("i",SettingsUtil.getAppLanguage());
+            if(SettingsUtil.getAppLanguage().equals("EN")){
+                setLocale("en");
+            } else if (SettingsUtil.getAppLanguage().equals("PL")) {
+                setLocale("pl");
+            }
+
+        });
     }
 
     private void setUpSpinner(Spinner spinner, int arrayResId, final String key) {
@@ -64,5 +85,15 @@ public class SettingsActivity extends AppCompatActivity {
                 // Do nothing here
             }
         });
+    }
+
+    public void setLocale(String langCode){
+        Locale myLocale = new Locale(langCode);
+        Resources resources = getResources();
+        Configuration config = resources.getConfiguration();
+        config.setLocale(myLocale);
+        resources.updateConfiguration(config,resources.getDisplayMetrics());
+        Intent refresh = new Intent(this, MainActivity.class);
+        startActivity(refresh);
     }
 }

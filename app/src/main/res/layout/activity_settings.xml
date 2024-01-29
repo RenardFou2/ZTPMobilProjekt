@@ -13,7 +13,7 @@
         android:id="@+id/difficultyLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Difficulty:"
+        android:text="@string/difficulty_settings_label"
         android:textSize="18sp"
         android:layout_marginTop="16dp"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/learningLanguageLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Learning Language:"
+        android:text="@string/learning_language_label"
         android:textSize="18sp"
         android:layout_below="@id/difficultySpinner"
         android:layout_marginTop="16dp"/>
@@ -44,7 +44,7 @@
         android:id="@+id/myLanguageLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Language:"
+        android:text="@string/my_language_label"
         android:textSize="18sp"
         android:layout_below="@id/learningLanguageSpinner"
         android:layout_marginTop="16dp"/>
@@ -55,5 +55,30 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/myLanguageLabel"
         android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/languageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_language_label"
+        android:textSize="18sp"
+        android:layout_below="@id/myLanguageSpinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/languageLabel"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/settingsBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/settings_back_button_text"/>
 
 </RelativeLayout>

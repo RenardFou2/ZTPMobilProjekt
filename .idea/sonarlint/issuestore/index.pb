@@ -1,14 +1,8 @@
 
-D
-app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 j
 :app/src/main/java/com/example/ztpmobilprojekt/WordDAO.java,3\c\3ce25765d2525f2fa70d9dd0e85202ad3177536b
-o
-?app/src/main/java/com/example/ztpmobilprojekt/MainActivity.java,9\d\9d264a259b54c3fc19e272a6a40559f8def92e0f
-q
-Aapp/src/main/java/com/example/ztpmobilprojekt/WordRepository.java,e\0\e078d27afdcc5ff117cf004d82e91e91229074a3
 p
 @app/src/main/java/com/example/ztpmobilprojekt/WordViewModel.java,2\b\2b893287734cb58e8619f355075a654b4f37c125
 g
@@ -17,9 +11,5 @@ v
 Fapp/src/main/java/com/example/ztpmobilprojekt/QuizSummaryActivity.java,2\e\2e6164f4c31dfc724319762575a844e426da70d4
 o
 ?app/src/main/java/com/example/ztpmobilprojekt/QuizTemplate.java,8\d\8d91d454c472949340be89e1cf8e014f8f32cfd5
-o
-?app/src/main/java/com/example/ztpmobilprojekt/SettingsUtil.java,2\5\25aed464a1a444bf8212a9dfe8d918efba6cd334
-s
-Capp/src/main/java/com/example/ztpmobilprojekt/SettingsActivity.java,9\e\9e310e8c574b737b8cb37af807748416adbc81c8
 @
 build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d

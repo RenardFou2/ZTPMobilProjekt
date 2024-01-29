@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 
 import java.util.List;
+import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -36,6 +37,7 @@ public class QuizActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        Locale.getDefault();
 
         checkButton = findViewById(R.id.checkBtn);
         textViewQuestion = findViewById(R.id.question_word);

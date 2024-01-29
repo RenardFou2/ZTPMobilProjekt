@@ -37,6 +37,11 @@
     <string name="reply_title">Default reply action</string>
 
     <!-- Settings Preferences -->
+    <string name="difficulty_settings_label">Difficulty</string>
+    <string name="learning_language_label">Learning language</string>
+    <string name="my_language_label">My language</string>
+    <string name="app_language_label">App language</string>
+    <string name="settings_back_button_text">Save</string>
     <string-array name="difficulty_options">
         <item>Easy</item>
         <item>Medium</item>
@@ -51,6 +56,11 @@
     <string-array name="my_language_options">
         <item>Polish</item>
         <item>English</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>PL</item>
+        <item>EN</item>
     </string-array>
 
 
@@ -69,8 +79,8 @@
     <string name="load_failed">Snapshot load failed</string>
 
     <!-- EditWord prefs -->
-    <string name="hint_word_difficulty">Poziom Trudności</string>
-    <string name="hint_word_polish">Polski</string>
+    <string name="hint_word_difficulty">Difficulty</string>
+    <string name="hint_word_polish">Polish</string>
     <string name="hint_word_english">English</string>
     <string name="button_save">SAVE</string>
     <string name="word_added">Word added</string>
